@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>USERS</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="script2.js"></script>
+</head>
+<body>
+<div class="container">
+    <h1>Set User</h1>
+    <p>ceci est testPUT avec paramètres QUery - AJAX avec Jquery  de dialogue  </p>
+    <form id="myform" method="put" action_template="rest/hellows?yourName=%n%">
+        <div class="form-group">
+            <div class="row">
+                <div class="col-sm-4 text-right">
+                    <label for="typedName">Give me your Name </label>
+                </div>
+
+                <div class="col-sm-6">
+                    <input class="form-control" type="text" id="typedName">
+                </div><div class="col-sm-2">
+                <!-- pas de type submit en ajax jquery, mais un javascript -->
+                <button class="text-left" value="ADD" onclick="sendMe(); return false;">ajouter...</button></div>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="container">
+    <!-- Content here -->
+    <h2>Résultat HTTP</h2>
+    <div id="resultHttp" class="card bg-info text-white" style="">-</div>
+</div>
+<div class="container">
+    <h2>Flux Serveur</h2><!-- Content here -->
+    <div id="resultServer" class="card bg-primary text-white">     -   </div>
+</div>
+</body>
+</html>
